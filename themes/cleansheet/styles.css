@@ -26,11 +26,11 @@ article h3{font-size:15px;margin-top:30px;}
 article h4{font-size:14px;margin-top:30px;}
 article h5{font-size:13px;margin-top:30px;}
 article h6{font-size:12px;margin-top:30px;}
-article header h1{margin:12px 0 0;font-size:22px;padding-top:0;float:left;width:500px;}
-div#wrap{margin:0 auto;width:900px;text-align:left;margin-top:-1px;border-top:1px solid transparent;}
+article header h1{margin:12px 0 0;font-size:22px;padding-top:0;float:left;width:640px;}
+div#wrap{margin:0 auto;width:1000px;text-align:left;margin-top:-1px;border-top:1px solid transparent;}
 aside#posterous_header{min-height:39px;}aside#posterous_header a.logo{background:url('/images/posterous-header.png') no-repeat left top;width:75px;height:35px;text-indent:-9999px;display:inline;margin-left:-5px;float:left;margin-left:150px;}
 aside#posterous_header nav{float:right;margin-top:10px;}
-header#page_header{width:500px;margin-left:155px;display:block;}header#page_header hgroup a:hover{text-decoration:none;color:#ccc;}
+header#page_header{width:640px;margin-left:155px;display:block;}header#page_header hgroup a:hover{text-decoration:none;color:#ccc;}
 header#page_header h1.header_image{margin-top:15px;}
 nav#navigation ul{margin-left:0;}nav#navigation ul li{list-style:none;display:inline-block;padding-right:20px;margin:0px 0px 10px 0px;}nav#navigation ul li a{font-size:17px;}
 section#extra_links{margin-bottom:15px;overflow:hidden;}section#extra_links a.back_to_blog{margin:15px 0;font-size:1.4em;display:block;}
@@ -54,11 +54,11 @@ section#rss a{text-indent:-9999px;width:14px;height:14px;display:block;backgroun
 aside#sidebar section#subscriptions{margin-bottom:15px;}
 section#tags li a span{font-size:10px;}
 div#articles{float:left;}
-article{width:655px;position:relative;margin-bottom:35px;}article header{width:655px;padding-top:5px;}article header section{float:left;width:130px;text-align:right;padding-top:17px;margin-right:25px;display:inline;min-height:40px;}
+article{width:795px;position:relative;margin-bottom:35px;}article header{width:795px;padding-top:5px;}article header section{float:left;width:130px;text-align:right;padding-top:17px;margin-right:25px;display:inline;min-height:40px;}
 article header aside.sms{float:left;padding-top:10px;}
 div.editbox{position:absolute;top:0;visibility:hidden;height:16px;left:155px;}div.editbox ul.mini_commands{margin-top:0px;}
 article:hover div.editbox{visibility:visible;}
-article div.body{width:500px;float:right;font-size:1.2em;line-height:1.8em;display:inline;}article div.body div.inner{margin:15px 0 0;}
+article div.body{width:640px;float:right;font-size:1.2em;line-height:1.8em;display:inline;}article div.body div.inner{margin:15px 0 0;}
 article div.body div.inner>*:first-child{margin-top:0;margin-bottom:0;}
 article div.body div.inner>p:first-child{margin-top:15px;}
 article div.body p,article div.body blockquote{margin:15px 0 18px;}
@@ -67,9 +67,9 @@ article footer{float:left;width:655px;margin-top:10px;}
 footer section.author{float:right;}footer section.author h1 a img{filter:alpha(opacity=[object Object]);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;filter:alpha(opacity=[object Object]);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;width:10px;height:10px;vertical-align:middle;border:1px solid #ccc;}
 footer section.author :hover h1 a img{filter:alpha(opacity=[object Object]);-moz-opacity:1;-khtml-opacity:1;opacity:1;filter:alpha(opacity=[object Object]);-moz-opacity:1;-khtml-opacity:1;opacity:1;width:20px;height:20px;}
 footer section.comments h1{font-size:12px;font-weight:normal;margin:0 0 0 155px;}
-footer section.comments section h1{margin-bottom:15px;padding-top:40px;width:500px;margin-left:155px;border-bottom:1px solid #ddd;padding-bottom:2px;font-size:16px;line-height:20px;font-weight:bold;}
-div.comment{float:left;width:500px;margin-left:25px;font-size:12px;line-height:20px;}
-div.comment_value{float:left;margin-left:25px;width:500px;line-height:18px;font-size:12px;}
+footer section.comments section h1{margin-bottom:15px;padding-top:40px;width:640px;margin-left:155px;border-bottom:1px solid #ddd;padding-bottom:2px;font-size:16px;line-height:20px;font-weight:bold;}
+div.comment{float:left;width:640px;margin-left:25px;font-size:12px;line-height:20px;}
+div.comment_value{float:left;margin-left:25px;width:640px;line-height:18px;font-size:12px;}
 div.comment_avatar{float:none;margin-top:10px;}
 div.commentunit div.profile_icon{margin-top:5px;}
 div.commentname{font-size:12px;margin-bottom:5px;}
@@ -82,8 +82,8 @@ footer section.locations{font-size:10px;margin-top:10px;margin-bottom:20px;}foot
 footer section.locations ul{display:block;margin:0;}footer section.locations ul li{display:block;list-style:none;}
 footer section.locations div.location_detail{margin-top:20px;padding:8px;background-color:#f9f9f9;border:1px solid #eee;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;overflow:auto;}footer section.locations div.location_detail div.map{float:left;width:300px;height:150px;}
 footer section.locations div.location_detail div.summary{float:right;width:172px;}
-footer section.share,footer section.tags,footer section.locations{width:500px;margin-left:155px;}
-footer#pagination{margin-left:155px;width:500px;padding-bottom:50px;overflow:hidden;clear:both;}
+footer section.share,footer section.tags,footer section.locations{width:640px;margin-left:155px;}
+footer#pagination{margin-left:155px;width:640px;padding-bottom:50px;overflow:hidden;clear:both;}
 .pagination{padding:3px;margin:3px;}.pagination a{padding:2px 5px;margin:2px;border:1px solid #ccc;text-decoration:none;color:#ccc;}
 .pagination span.disabled{padding:2px 5px;margin:2px;border:1px solid #eee;color:#ddd;}
 footer section.share{height:25px;margin-bottom:10px;}
@@ -115,11 +115,10 @@ section#extra_links{margin-top:15px;}
 section#extra_links h1 span{letter-spacing:0;display:block;font-size:10px;font-weight:normal;color:#999;}
 section#extra_links ul{color:#999;font-size:10px;}
 form.search input.text{font-size:12px;padding:2px 2px 2px 20px;border:1px solid #ccc;background:#999999 url('/images/icons/search16.png') no-repeat 3px 3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
-aside#sidebar{float:right;width:175px;margin-top:20px;font-size:1.2em;color:#999;}
-aside#sidebar section h1{font-size:11px;font-weight:normal;color:#999;letter-spacing:0;}
+aside#sidebar{float:right;width:160px;margin-top:20px;font-size:1.2em;color:#999;}aside#sidebar section h1{font-size:11px;font-weight:normal;color:#999;letter-spacing:0;}
 aside#sidebar section ul li{list-style:none;color:#999;}
-section#statistics{font-size:10px;color:#999;}
-section#statistics strong{color:#424037;}
+aside#sidebar section#profile{line-height:1.4em;}
+section#statistics{font-size:10px;color:#999;}section#statistics strong{color:#424037;}
 section#tags li.selected a{color:#424037;}
 h2#archive_list{margin-top:0px;color:#111;}
 section#archives{display:block;}
