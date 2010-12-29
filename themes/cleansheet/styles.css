@@ -140,7 +140,7 @@ footer section.locations h1{font-size:11px;font-weight:normal;color:#999;line-he
 .pagination span.current{padding:2px 5px;margin:2px;font-weight:bold;border:1px solid #bc7134;background-color:#bc7134;color:#fff;}
 input,select,textarea{color:#444;font-size:1.6em;font-family:"Lucida Grande",sans-serif;line-height:1.3em !important;padding:5px;-webkit-text-stroke:1px rgba(255, 255, 255, 0.01);}
 input[type='text'],input[type='password'],select,textarea{background-color:#fff;border:1px solid #ccc;}
-input[type='button'],input[type='submit']{height:2em;font-size:1.4em;color:#444;margin-top:10px;}
+input[type='button'],input[type='submit']{height:2em;font-size:1.4em;color:#fff;margin-top:10px;}
 button,input.awesome{text-rendering:optimizeLegibility;font-family:HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;border-style:none;-webkit-text-stroke:1px rgba(255, 255, 255, 0.01);}
 *:first-child+html button{margin-left:1px;margin-right:1px;}
 button:hover{cursor:pointer;}
