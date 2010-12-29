@@ -1,0 +1,246 @@
+/*
+---
+DESCRIPTION: Helper with a set of functions in CSS2/3 common styles which works cross-browser, written in LESS
+functions.less creates useful cross-browser styling functions
+
+VERSION: 1.0 Beta
+
+LICENSE: MIT-style license
+
+AUTHORS:
+- Luis Merino
+
+COPYRIGHT:
+- Author - http://www.luismerino.name/
+
+DEPENDENCIES:
+- To compile .less to .css files, please install the LESS Ruby gem http://lesscss.org/
+
+BOOKMARKS (@group):
+- @group CLEARFIX
+- @group BORDER_RADIUS
+- @group BOX_SHADOW
+- @group COLORATION
+- @group TRANSFORMATIONS
+- @group SELECTION
+...
+*/
+
+/* @group CLEARFIX >> */
+
+.Clearfix() {
+	zoom: 1; // IE6/7
+	:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
+
+/* @end << */
+
+/* @group BORDER_RADIUS >> */
+
+.BorderRadius(@radius:5px)
+{
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+ 
+.BorderRadiusTop(@radius:5px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+}
+ 
+.BorderRadiusBottom(@radius:5px)
+{
+    -webkit-border-bottom-left-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+ 
+.BorderRadiusLeft(@radius:5px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-top-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+ 
+.BorderRadiusRight(@radius:5px)
+{
+    -webkit-border-top-right-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-top-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+.BorderRadiusTopLeft(@radius:5px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    border-top-left-radius: @radius;
+}
+.BorderRadiusTopRight(@radius:5px)
+{
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-right-radius: @radius;
+}
+
+.BorderRadiusBottomLeft(@radius:5px)
+{
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-bottom-left-radius: @radius;
+}
+.BorderRadiusBottomRight(@radius:5px)
+{
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+/* @end << */
+
+/* @group BOX_SHADOW >> */
+
+.BoxShadow(@h: 0px, @v: 0px, @s: 4px, @r: 0, @g: 0, @b: 0, @a: 100)
+{
+	@op: @a/100;
+	-moz-box-shadow: @h @v @s rgba(@r, @g, @b, @op);
+	-webkit-box-shadow: @h @v @s rgba(@r, @g, @b, @op);
+	box-shadow: @h @v @s rgba(@r, @g, @b, @op);
+}
+
+.IEShadow(@r:4px, @o:0.5, @c:#000)
+{
+	background: @c;
+	filter: formatstring("progid:DXImageTransform.Microsoft.Blur(PixelRadius='{0}', MakeShadow='true', ShadowOpacity='{1}')", @r, @o); /* IE6,IE7 */
+    -ms-filter: formatstring("{3}progid:DXImageTransform.Microsoft.Blur(PixelRadius='{0}', MakeShadow='true', ShadowOpacity='{1}'){3}", @r, @o, '"'); /* IE8 */
+}
+
+/* @end << */
+
+/* @group COLORATION >> */
+
+.Opacity(@op: 100)
+{
+    filter:alpha(opacity=@op);
+    -moz-opacity:@op/100;
+    -khtml-opacity:@op/100;
+    opacity:@op/100;
+}
+
+.BackgroundGradient(@from:#000, @to:#EEE)
+{
+    background: @from;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background-image: -moz-linear-gradient(top, @from, @to);
+    filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{1}')", @from, @to); /* IE6,IE7 */
+    -ms-filter: formatstring("{2}progid:DXImageTransform.Microsoft.gradient(startColorStr='{0}', EndColorStr='{1}'){2}", @from, @to, '"'); /* IE8 */
+}
+
+.IEBackgroundGradient(@r: 00, @g: 00, @b: 00, @a: 50)
+{
+	@color: @a+@r+@g+@b;
+	filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{0}')", @color);
+	-ms-filter: formatstring("{1}progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{0}'){1}", @color, '"');
+}
+
+/* @end << */
+
+/* @group TRANSITION >> */
+
+.Transition(@range: all, @time: 1s, @ease: ease-in-out)
+{
+    -moz-transition: @range @time @ease;
+    -webkit-transition: @range @time @ease;
+    -o-transition: @range @time @ease;
+    transition: @range @time @ease;
+}
+
+/* @end << */
+
+/* @group TRANSFORMATIONS >> */
+
+.Skew(@angle_x:35, @angle_y:0)
+{
+    -webkit-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    -moz-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    -o-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    -ms-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+    transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+}
+ 
+.Scale(@scale_x: 1)
+{
+    -webkit-transform: scale(@scale_x);
+    -moz-transform: scale(@scale_x);
+    -o-transform: scale(@scale_x);
+    -ms-transform: scale(@scale_x);
+    transform: scale(@scale_x);
+}
+ 
+.Rotate(@angle:35)
+{
+    -webkit-transform: rotate(formatstring("{0}deg", @deg));
+    -moz-transform: rotate(formatstring("{0}deg", @deg));
+    -o-transform: rotate(formatstring("{0}deg", @deg));
+    -ms-transform: rotate(formatstring("{0}deg", @deg));
+    transform: rotate(formatstring("{0}deg", @deg));
+}
+ 
+.Translate(@move_x: 10px, @move_y: 10px)
+{
+    -webkit-transform: translate(@move_x, @move_y);
+    -moz-transform: translate(@move_x, @move_y);
+    -o-transform: translate(@move_x, @move_y);
+    -ms-transform:translate(@move_x, @move_y);
+    transform: translate(@move_x, @move_y);
+}
+
+/* @end << */
+
+/* @group SELECTION >> */
+
+.Selection {
+	.transparent() {
+		::-moz-selection {
+			background: transparent;
+			color: inherit;
+		}
+		::selection {
+			background: transparent;
+			color: inherit;
+		}
+	}
+	.default() {
+		::-moz-selection {
+			background: #;
+			color: #;
+		}
+		::selection {
+			background: #;
+			color: #;
+		}
+	}
+}
+
+/* @end << */

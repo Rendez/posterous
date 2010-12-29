@@ -1,0 +1,69 @@
+/*
+---
+DESCRIPTION: Navigation Less sheet for Cleansheet Posterous style.
+
+VERSION: 1.0 Beta
+
+LICENSE: MIT-style license
+
+AUTHORS:
+- Luis Merino
+
+COPYRIGHT:
+- Author - http://www.luismerino.name/
+
+DEPENDENCIES:
+- To compile .less to .css files, please install the LESS Ruby gem http://lesscss.org/
+
+BOOKMARKS (@group):
+- @group MAIN_NAV
+- @group EXTRA_LINKS
+...
+*/
+
+/* @group MAIN_NAV >> */
+
+nav#navigation ul {
+	margin-left: 0;
+	li {
+		list-style: none;
+		display: inline-block;
+		padding-right: 20px;
+		margin: 0px 0px 10px 0px;
+		a {
+			font-size: 17px;
+		}
+	}
+}
+
+/* @end << */
+
+/* @group EXTRA_LINKS >> */
+
+section#extra_links {
+	margin-bottom: 15px;
+	overflow: hidden;
+	a.back_to_blog {
+		margin: 15px 0;
+		font-size: 1.4em;
+		display: block;
+	}
+	h1 {
+		color: #111;
+		font-size: 18px;
+		margin-bottom: 2px;
+	}
+	div { height: 11px; }
+	a#global_tags {
+		display: block;
+		font-size: 10px;
+	}
+	ul li {
+		list-style: none;
+		display: inline;
+		padding-right: 10px;
+	}
+	a#search_all { display: block; font-size: 10px; }
+}
+
+/* @end << */

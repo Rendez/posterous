@@ -1,0 +1,104 @@
+/*
+---
+DESCRIPTION: Custom Less sheet for Cleansheet Posterous style.
+
+VERSION: 1.0 Beta
+
+LICENSE: MIT-style license
+
+AUTHORS:
+- Luis Merino
+
+COPYRIGHT:
+- Author - http://www.luismerino.name/
+
+DEPENDENCIES:
+- To compile .less to .css files, please install the LESS Ruby gem http://lesscss.org/
+- /functions.less
+
+BOOKMARKS (@group):
+- @group 
+...
+*/
+
+@import "functions";
+
+// TODO: find out why compiler throws error when using mix-ins
+.Colour {
+	@Background: #fff;
+	@Link: #bc7134;
+	@Text: #424037;
+	@Post_Title: #444;
+    @Lighter_Text: #999;
+	@Date: #c6c1a5;
+}
+
+body, html {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#424037;
+}
+
+a { color:#bc7134; text-decoration: none; }
+a[name] { color:#999; text-decoration: none; }
+
+article header h1 a { color:#444; }
+article header h1 a:hover { color:#999; text-decoration: none; }
+
+header#page_header hgroup { margin-top: 40px; color:#999; display: block; }
+header#page_header hgroup a { color:#999; }
+header#page_header hgroup h2 { margin: 10px 0 30px; font-size: 1.4em; font-weight: normal; color:#999; letter-spacing: 0px;}
+
+nav#navigation ul li a.current { color:#999; }
+
+section#extra_links {margin-top:15px;}
+section#extra_links h1 span { letter-spacing: 0; display: block; font-size: 10px; font-weight: normal; color:#999; }
+section#extra_links ul { color:#999; font-size: 10px; }
+
+form.search input.text { font-size: 12px; padding: 2px 2px 2px 20px; border: 1px solid #ccc; background: #999 url('/images/icons/search16.png') no-repeat 3px 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+
+aside#sidebar { float: right; width: 175px; margin-top: 20px; font-size: 1.2em; color:#999; }
+aside#sidebar section h1 { font-size: 11px; font-weight: normal; color:#999; letter-spacing: 0; }
+aside#sidebar section ul li { list-style: none; color:#999; }
+
+section#statistics { font-size: 10px; color:#999; }
+section#statistics strong { color:#424037; }
+
+section#tags li.selected a { color:#424037; }
+
+h2#archive_list {margin-top: 0px; color: #111;}
+section#archives {display:block;}
+section#archives div.inner {margin-left:10px;line-height:1.5em;}
+section#archives div.year {margin-top:5px;margin-bottom:5px;}
+
+article header aside.sms { font-size: 11px; color:#999; }
+
+div.editbox a { color:#999; }
+div.editbox a:hover { color:#bc7134; }
+
+article time a { font-size: 14px; color:#c6c1a5; }
+
+footer section.author h1 { font-size: 10px; font-weight: normal; color:#999; margin: 0 0 5px; }
+footer section.author h1 a { color:#999; }
+footer section.author:hover h1 a { color:#bc7134; text-decoration: none; }
+
+/*      div.comment_loading_div { margin-left: 150px; }*/
+div.comment_label { float: left; width: 130px; color:#c6c1a5; font-size: 14px; padding-top: 2px; margin-top: 0px; text-align: right; }
+div.comment_spacer { float: left; width: 130px; color:#999; font-size: 14px; padding-top: 14px; text-align: right; display: block; }
+div.comment_date { color:#c6c1a5; font-size: 14px; }
+div.commentunit { margin: 10px 0px; color:#424037; }
+
+footer section.locations h1 { font-size: 11px; font-weight: normal; color:#999; line-height: 21px; margin-top: 0px; }
+
+.pagination a:hover, .pagination a:active { border: 1px solid #ca9d00; color:#bc7134; }
+.pagination span.current { padding: 2px 5px; margin: 2px; font-weight: bold; border: 1px solid #bc7134; background-color: #bc7134; color: #fff; }
+
+input, select, textarea { color:#444; font-size: 1.6em; font-family: "Lucida Grande", sans-serif; 
+    line-height:1.3em !important; padding: 5px; }
+input[type='text'], input[type='password'], select, textarea { background-color:#fff; border: 1px solid #ccc; }
+input[type='button'], input[type='submit'] { height: 2em; font-size: 1.4em; color:#444; margin-top: 10px; }

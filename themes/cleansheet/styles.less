@@ -1,0 +1,415 @@
+/*
+---
+DESCRIPTION: Main Less sheet for Cleansheet Posterous style.
+
+VERSION: 1.0 Beta
+
+LICENSE: MIT-style license
+
+AUTHORS:
+- Luis Merino
+
+COPYRIGHT:
+- Author - http://www.luismerino.name/
+
+DEPENDENCIES:
+- To compile .less to .css files, please install the LESS Ruby gem http://lesscss.org/
+- /functions.less
+
+BOOKMARKS (@group):
+- @group RESET
+- @group BASE
+- @group CONTENT
+- @group NAVIGATION
+- @group CUSTOM
+...
+*/
+
+/* @group RESET >> */
+
+* { margin: 0; padding: 0; }
+header, footer, aside, section, article, nav { display: block; }
+
+/* @end << */
+
+@import "functions";
+
+/* @group BASE >> */
+
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+// browser fixes
+select { min-width:1.5em; }
+
+body { font-size: 62.5%; }
+html { font-size: 100%; }
+
+p, ol, ul { margin: 10px 0; }
+img { border: none; }
+
+ol { margin: 15px 0 15px 20px; }
+ul { margin: 15px 0 15px 15px; }
+pre { margin: 10px 0; }
+
+h1 { font-size: 3.2em; line-height: 1em; }
+header h1 { letter-spacing: -1px; }
+h2 { font-size: 1.8em; letter-spacing: -1px; }
+h3 { font-size: 1.6em; letter-spacing: -0.5px; }
+h4 { font-size: 1.4em; letter-spacing: -0.5px; }
+h5 { font-size: 1.3em; }
+h6 { font-size: 1.2em; }
+
+a[name]:hover { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* @end << */
+
+/* @group CONTENT >> */
+
+article {
+	h1 { font-size: 20px; margin-top: 30px; }
+	h2 { font-size: 18px; margin-top: 30px; }
+	h3 { font-size: 15px; margin-top: 30px; }
+	h4 { font-size: 14px; margin-top: 30px; }
+	h5 { font-size: 13px; margin-top: 30px; }
+	h6 { font-size: 12px; margin-top: 30px; }
+}
+
+article header h1 { margin: 12px 0 0; font-size: 22px; padding-top: 0; float: left; width: 500px; }
+
+div#wrap { margin: 0 auto; width: 900px; text-align: left; margin-top: -1px; border-top: 1px solid transparent; }
+
+aside#posterous_header {
+	min-height: 39px;
+	a.logo {
+		background: url('/images/posterous-header.png') no-repeat left top;
+		width: 75px;
+		height: 35px;
+		text-indent: -9999px;
+		display: inline;
+		margin-left: -5px;
+		float: left;
+		margin-left: 150px;
+	}
+	nav {
+		float: right;
+		margin-top: 10px;
+	}
+}
+
+header#page_header {
+	width: 500px;
+	margin-left: 155px;
+	display: block;
+	hgroup a:hover {
+		text-decoration: none;
+		color: #ccc;
+	}
+	h1.header_image { margin-top: 15px; }
+}
+
+/* @end << */
+
+/* @group NAVIGATION >> */
+
+@import "navigation";
+
+/* @end << */
+
+form.search input.submit { font-size: 10px; padding: 2px; margin: 5px 10px 0 0; }
+
+aside#sidebar section {
+	margin-bottom: 30px;
+	ul { margin: 0; }
+}
+
+section#profile {
+	h1 { margin: 0; }
+	img.profile_image {
+		border: 1px solid #ccc;
+		width: 75px;
+		height: 75px;
+	}
+	div.external { margin: 10px 0; }
+	> a {
+		margin: 10px 0;
+		display: block;
+	}
+}
+
+section#contributors li {
+	a img {
+		width: 20px;
+		height: 20px;
+		border: 1px solid #ccc;
+		vertical-align: middle;
+	}
+	a { vertical-align: middle; }
+	a:first-child {
+		text-decoration: none;
+		padding-right: 3px;
+	}
+}
+
+section#statistics ul li { margin-bottom: 5px; }
+
+section#fans img { width: 20px; height: 20px; vertical-align: middle; border: 1px solid #ccc; }
+
+section#rss a { text-indent: -9999px; width: 14px; height: 14px; display: block; background: url('/images/feed-icon-14x14.png') no-repeat left top; }
+aside#sidebar section#subscriptions { margin-bottom: 15px; }
+section#tags li a span { font-size: 10px; }
+
+div#articles { float: left; }
+article {
+	width: 655px;
+	position: relative;
+	margin-bottom: 35px;
+	header {
+		width: 655px;
+		padding-top: 5px;
+		section {
+			float: left;
+			width: 130px;
+			text-align: right;
+			padding-top: 17px;
+			margin-right: 25px;
+			display: inline;
+			min-height: 40px;
+		}
+		aside.sms {
+			float: left;
+			padding-top: 10px;
+		}
+	}
+}
+
+div.editbox {
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	height: 16px;
+	left: 155px;
+	ul.mini_commands { margin-top: 0px; }
+}
+article:hover div.editbox { visibility: visible; }
+
+article div.body {
+	width: 500px;
+	float: right;
+	font-size: 1.2em;
+	line-height: 1.8em;
+	display: inline;
+	div.inner { margin: 15px 0 0; }
+	div.inner > *:first-child { margin-top: 0; margin-bottom: 0; }
+	div.inner > p:first-child { margin-top: 15px; }
+	p, blockquote { margin: 15px 0 18px; }
+	div.posterousGalleryMainDiv { margin: 0 0 15px; }
+}
+
+article footer { float: left; width: 655px; margin-top: 10px; }
+
+footer section.author {
+	float: right;
+	h1 a img {
+		.Opacity(50);
+		width: 10px;
+		height: 10px;
+		vertical-align: middle;
+		border: 1px solid #ccc;
+	}
+	:hover h1 a img {
+		.Opacity(100);
+		width: 20px;
+		height: 20px;
+	}
+}
+
+footer section.comments {
+	h1 {
+		font-size: 12px;
+		font-weight: normal;
+		margin: 0 0 0 155px;
+	}
+	section h1 {
+		margin-bottom: 15px;
+		padding-top: 40px;
+		width: 500px;
+		margin-left: 155px;
+		border-bottom: 1px solid #ddd;
+		padding-bottom: 2px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: bold;
+	}
+}
+
+div.comment { float: left; width: 500px; margin-left: 25px; font-size: 12px; line-height: 20px; }
+div.comment_value { float: left; margin-left: 25px; width: 500px; line-height: 18px; font-size: 12px; }
+div.comment_avatar { float: none; margin-top: 10px; }
+div.commentunit div.profile_icon { margin-top: 5px; }
+div.commentname { font-size: 12px; margin-bottom: 5px; }
+div.comment_loading_div { margin-left: 155px; }
+div.comment_spacer { font-size: 14px; padding-top: 14px; }
+div.comment_area { clear: left; float: left; }
+
+footer section.tags {
+	color: #aaa;
+	margin-bottom: 20px;
+	h1 {
+		font-size: 11px;
+		margin: 0;
+		padding-right: 5px;
+		display: inline;
+		span { font-weight: normal;}
+	}
+	ul {
+		margin: 0;
+		display: inline;
+		li {
+			padding-right: 10px;
+			display: inline;
+			list-style: none;
+			a { color: #666; }
+		}
+	}
+}
+
+footer section.locations {
+	font-size: 10px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	h2 {
+		font-size: 11px; margin-top: 0px;
+	}
+	ul {
+		display: block;
+		margin: 0;
+		li {
+			display: block;
+			list-style: none;
+		}
+	}
+	div.location_detail {
+		margin-top: 20px;
+		padding: 8px;
+		background-color: #f9f9f9;
+		border: 1px solid #eee;
+		.BorderRadius(5px);
+		overflow: auto;
+		div.map {
+			float: left;
+			width: 300px;
+			height: 150px;
+		}
+		div.summary {
+			float: right;
+			width: 172px;
+		}
+	}
+}
+
+footer {
+	section.share, section.tags, section.locations {
+		width: 500px;
+		margin-left: 155px;
+	}
+}
+
+footer#pagination {
+	margin-left: 155px;
+	width: 500px;
+	padding-bottom: 50px;
+	overflow: hidden;
+	clear: both;
+}
+.pagination {
+	padding: 3px;
+	margin: 3px;
+	a {
+		padding: 2px 5px;
+		margin: 2px;
+		border: 1px solid #ccc;
+		text-decoration: none;
+		color: #ccc;
+	}
+	span.disabled {
+		padding: 2px 5px;
+		margin: 2px;
+		border: 1px solid #eee;
+		color: #ddd;
+	}
+}
+
+footer section.share {
+	height: 25px;
+	margin-bottom: 10px;
+}
+div.ajaxResult {
+	margin-bottom: 10px;
+	color: #090;
+	font-size: 10px;
+}
+div.retweet {
+	display: inline-block;
+	vertical-align: middle;
+	background: url('/images/icons/services/twitter11.png') no-repeat left center;
+	padding-left: 15px;
+	min-width: 1px;
+	min-height: 11px;
+	zoom: 1;
+	*display: inline;
+}
+.twitter-share-button { float: left; }
+div.facebook_like {
+	float: left;
+	display: inline;
+	position: relative;
+	margin-left: 5px;
+	zoom: 1;
+}
+
+table { font-size: 11px; border: none; margin: 10px 0 0; border-spacing: 0px; line-height: 16px; text-align: left; }
+td { border: none; border-bottom: 1px solid #eee; padding: 4px; margin: 0px; vertical-align: top; }
+th { text-align: left; font-weight: bold; padding: 4px; border: none; border-bottom: 1px solid #ccc; vertical-align: bottom; }
+hr { margin-top: 10px; margin-bottom: 10px; border: 1px solid #ddd; }
+div.posterousListComments div.comment, div.posterousAddNewComment div.comment, div.posterousAddNewComment div.comment_value { margin-left: 25px; }
+aside.private { position: relative; margin-top: 10px; }
+aside.private:hover div.private_post_message { display: block; }
+div.private_post_message {
+	position: absolute;
+	right: 0;
+	top: 0;
+	.BorderRadius(5px);
+	.BoxShadow(0, 3px, 10px, 0, 0, 0, 23);
+	.BackgroundGradient(#fff, #f2f2f2);
+	background: #f2f2f2;
+	border: 1px solid #aaa;
+	padding: 10px;
+	width: 100px;
+	display: none;
+	text-align: left;
+	h1 {
+		font-size: 11px;
+		margin: 0 0 5px 0;
+		padding: 0;
+		float: none;
+		width: auto;
+	}
+	p {
+		font-size: 10px;
+		margin: 0;
+	}
+}
+div.posterous_retweet_widget { margin: 0px 0px 10px; }
+div.posterous_tweet_button {
+	float: left;
+	margin-right: 15px;
+}
+
+/* @group CUSTOM >> */
+
+@import "custom";
+
+/* @end << */
