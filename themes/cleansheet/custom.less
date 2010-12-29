@@ -66,7 +66,13 @@ section#extra_links {margin-top:15px;}
 section#extra_links h1 span { letter-spacing: 0; display: block; font-size: 10px; font-weight: normal; color:#999; }
 section#extra_links ul { color:#999; font-size: 10px; }
 
-form.search input.text { font-size: 12px; padding: 2px 2px 2px 20px; border: 1px solid #ccc; background: #999 url('/images/icons/search16.png') no-repeat 3px 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+form.search input.text {
+	font-size: 12px;
+	padding: 2px 2px 2px 20px;
+	border: 1px solid #ccc;
+	background: #fff url(images/icons/search16.png) no-repeat 3px 3px;
+	.BorderRadius(3px);
+}
 
 aside#sidebar {
 	float: right;
@@ -110,7 +116,7 @@ div.editbox a { color:#999; }
 div.editbox a:hover { color:#bc7134; }
 
 article time {
-	//font-family: 'Reenie Beanie', serif; // 'Reenie Beanie'
+	//font-family: 'PT Sans', sans-serif; // 'Reenie Beanie'
 	a {
 		font-size: 14px;
 		color:#c6c1a5;
@@ -132,7 +138,25 @@ footer section.locations h1 { font-size: 11px; font-weight: normal; color:#999; 
 .pagination a:hover, .pagination a:active { border: 1px solid #ca9d00; color:#bc7134; }
 .pagination span.current { padding: 2px 5px; margin: 2px; font-weight: bold; border: 1px solid #bc7134; background-color: #bc7134; color: #fff; }
 
-input, select, textarea { color:#444; font-size: 1.6em; font-family: "Lucida Grande", sans-serif; 
-    line-height:1.3em !important; padding: 5px; }
+input, select, textarea {
+	color:#444;
+	font-size: 1.6em;
+	font-family: "Lucida Grande", sans-serif;
+	line-height: 1.3em !important;
+	padding: 5px;
+	-webkit-text-stroke: 1px rgba(255,255,255,.01); /* Snow Leopard Safari Type Fix */
+}
 input[type='text'], input[type='password'], select, textarea { background-color:#fff; border: 1px solid #ccc; }
 input[type='button'], input[type='submit'] { height: 2em; font-size: 1.4em; color:#444; margin-top: 10px; }
+
+@import "buttons";
+
+input[name="commit"] {
+	.awesome;
+	font-size: 14px;
+	padding: 8px 14px 9px;
+}
+
+input[name="commit"], x:-moz-any-link {
+	padding-bottom: 7px;
+}

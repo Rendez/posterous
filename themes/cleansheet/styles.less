@@ -22,6 +22,7 @@ BOOKMARKS (@group):
 - @group CONTENT
 - @group NAVIGATION
 - @group CUSTOM
+- @group BUTTONS
 ...
 */
 
@@ -29,6 +30,11 @@ BOOKMARKS (@group):
 
 * { margin: 0; padding: 0; }
 header, footer, aside, section, article, nav { display: block; }
+
+// Based on styles from http://www.zurb.com/
+//body { -webkit-text-stroke: 1px rgba(255,255,255,.01); } /* Snow Leopard Safari Type Fix */
+@media only screen and (max-device-width:480px) { body { -webkit-text-stroke:0 black; } } /* Undo the fix for Mobile Safari */
+body.ff2 { opacity: .99; } /* Make our type in FF look uber sexah */
 
 /* @end << */
 
@@ -130,8 +136,6 @@ header#page_header {
 
 /* @end << */
 
-form.search input.submit { font-size: 10px; padding: 2px; margin: 5px 10px 0 0; }
-
 aside#sidebar section {
 	margin-bottom: 30px;
 	ul { margin: 0; }
@@ -220,7 +224,7 @@ article div.body {
 	div.posterousGalleryMainDiv { margin: 0 0 15px; }
 }
 
-article footer { float: left; width: 655px; margin-top: 10px; }
+article footer { float: left; width: 800px; margin-top: 10px; }
 
 footer section.author {
 	float: right;
@@ -423,5 +427,11 @@ div.posterous_tweet_button {
 /* @group CUSTOM >> */
 
 @import "custom";
+
+/* @end << */
+
+/* @group BUTTONS >> */
+
+@import "buttons";
 
 /* @end << */

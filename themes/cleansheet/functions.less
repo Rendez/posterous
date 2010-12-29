@@ -153,8 +153,8 @@ BOOKMARKS (@group):
     background: @from;
     background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
     background-image: -moz-linear-gradient(top, @from, @to);
-    filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{1}')", @from, @to); /* IE6,IE7 */
-    -ms-filter: formatstring("{2}progid:DXImageTransform.Microsoft.gradient(startColorStr='{0}', EndColorStr='{1}'){2}", @from, @to, '"'); /* IE8 */
+    filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{1}')", @from, @to); // IE6,IE7
+    -ms-filter: formatstring("{2}progid:DXImageTransform.Microsoft.gradient(startColorStr='{0}', EndColorStr='{1}'){2}", @from, @to, '"'); // IE8
 }
 
 .IEBackgroundGradient(@r: 00, @g: 00, @b: 00, @a: 50)
