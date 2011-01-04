@@ -65,7 +65,7 @@ article div.body div.inner>*:first-child{margin-top:0;margin-bottom:0;}
 article div.body div.inner>p:first-child{margin-top:15px;}
 article div.body p,article div.body blockquote{margin:15px 0 18px;}
 article div.body div.posterousGalleryMainDiv{margin:0 0 15px;}
-article div.body blockquote{color:#5a5a5a !important;font-size:1.1em !important;font-family:Arial,Helvetica,sans-serif !important;padding-left:15px 15px 15px 30px !important;background:#eeeeee url('images/quote.png') no-repeat;display:block !important;width:610px;}
+article div.body blockquote{color:#5a5a5a !important;font-size:1.1em !important;font-family:Arial,Helvetica,sans-serif !important;padding:15px 15px 15px 30px !important;background:#eeeeee url('images/quote.png') no-repeat;display:block !important;width:610px;}
 article footer{float:left;width:800px;margin-top:10px;}
 footer section.author{float:right;}footer section.author h1 a img{filter:alpha(opacity=[object Object]);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;filter:alpha(opacity=[object Object]);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;filter:alpha(opacity=[object Object]);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;filter:alpha(opacity=[object Object]);-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;width:10px;height:10px;vertical-align:middle;border:1px solid #ccc;}
 footer section.author :hover h1 a img{filter:alpha(opacity=[object Object]);-moz-opacity:1;-khtml-opacity:1;opacity:1;filter:alpha(opacity=[object Object]);-moz-opacity:1;-khtml-opacity:1;opacity:1;filter:alpha(opacity=[object Object]);-moz-opacity:1;-khtml-opacity:1;opacity:1;filter:alpha(opacity=[object Object]);-moz-opacity:1;-khtml-opacity:1;opacity:1;width:20px;height:20px;}
